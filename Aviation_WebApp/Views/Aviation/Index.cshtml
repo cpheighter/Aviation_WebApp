@@ -1,0 +1,18 @@
+﻿@using Aviation_WebApp.Models;
+@model AirlineRoot
+
+
+<table>
+    <tr>
+        <th>Airlines</th>
+    </tr>
+   @foreach(var item in @Model.response)
+   {
+    <tr>
+        <td>@item.name</td>
+    </tr>
+    
+    }
+</table>
+
+
