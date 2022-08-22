@@ -1,0 +1,22 @@
+﻿@model FlightRoot
+
+<h1>Departures from </h1>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Carrier</th>
+        <th>Flight</th>
+        <th>Destination</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var item in @Model.response)
+    {
+        <tr>
+            <td>@item.dep_time</td>
+            <td>@item.airline_iata</td>
+            <td>@item.cs_flight_iata</td>
+            <td>@item.arr_iata</td>
+            <td>@item.status</td>
+        </tr>
+    }
+</table>

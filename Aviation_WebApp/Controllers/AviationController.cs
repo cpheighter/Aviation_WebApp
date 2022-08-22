@@ -18,7 +18,7 @@ namespace Aviation_WebApp.Controllers
             Thread.Sleep(3000);
             rootTest = JsonConvert.DeserializeObject<AirlineRoot>(response);
             return View(rootTest);
-
         }
+        
     }
 }
