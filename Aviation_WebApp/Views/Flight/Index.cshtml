@@ -1,10 +1,8 @@
 ﻿@using Aviation_WebApp.ViewModels
 @model FlightViewModel
 
-<div class="container text-white-50 mucho-margin-top">
-    <div class="mb-4"><br /><br /></div>
-    <h1 class="display-2 text-white text-center">OpenWeatherMap API Demo</h1>
-    <h2>Getting the weather by City Name.</h2>
+<h3>Enter Airport IATA Code</h3>
+<div style="display: list item">
     @using (Html.BeginForm("FlightTracker", "Flight", FormMethod.Post))
     {
         <table>

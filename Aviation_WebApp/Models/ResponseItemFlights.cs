@@ -4,7 +4,7 @@
     {
         public string? airline_iata { get; set; }
         public string? airline_icao { get; set; }
-        public string flight_iata { get; set; }
+        public string? flight_iata { get; set; }
         public string? flight_icao { get; set; }
         public string? flight_number { get; set; }
         public string? dep_iata { get; set; }
