@@ -1,12 +1,19 @@
 ﻿@using Aviation_WebApp.Models;
 @model AirlineRoot
 
+<style>
+    
+    tr:hover {background-color: coral;}
+    tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+
 <h1>Airlines</h1>
-<table class="table">
-    <tr>
+<table class="table"; style="border-style: groove;">
+    <tr style="background-color: #04AA6D;">
         <th>Name</th>
         <th>IATA Code</th>
         <th>ICAO Code</th>
+        <th>International Flights</th>
     </tr>
     
    @foreach(var item in @Model.response)
@@ -16,6 +23,16 @@
         <td><a asp-protocol="https" asp-host=@item.website>@item.name</a></td>
         <td>@item.iata_code</td>
         <td>@item.icao_code</td>
+        @if(@item.is_international == 1)
+           {
+            <td span{content:"\2713";}><span>&#10003;</span></td>
+           }
+        else   
+        {
+            <td></td>
+        }
+
+            
         
         
     </tr>

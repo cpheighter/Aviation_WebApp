@@ -1,18 +1,20 @@
 ﻿@using Aviation_WebApp.ViewModels
 @model FlightViewModel
 
-<h3>Enter Airport IATA Code</h3>
+<h3>Search Airport Departing Flights</h3>
 <div style="display: list item">
     @using (Html.BeginForm("FlightTracker", "Flight", FormMethod.Post))
     {
-        <table>
+        <table class="table"; style="border-style: groove;">
             <tr>
-                <td>Enter Airport Code: </td>
+                <th>Enter Airport IATA Code: </th>
+            </tr>
+            <tr>
                 <td>@Html.TextBoxFor(x => x.iata)</td>
             </tr>
             
             <tr>
-                <td colspan="2"><input type="submit" value="Submit Form" /></td>
+                <td colspan="2"><input type="submit" value="Search" /></td>
             </tr>
         </table>
     }
