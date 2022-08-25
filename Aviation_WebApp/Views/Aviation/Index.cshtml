@@ -1,16 +1,29 @@
-﻿@using Aviation_WebApp.Models;
+﻿
 @model AirlineRoot
 
 <style>
+     body {
+            background-image: url("https://images.unsplash.com/photo-1454496406107-dc34337da8d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1300&q=80");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+    }
+
+    div{
+        font-family: "consolas";  
+    }
     
-    tr:hover {background-color: coral;}
-    tr:nth-child(even) {background-color: #f2f2f2;}
+    tr:hover td{
+       
+        background-color: deepskyblue;}
 </style>
 
-<h1>Airlines</h1>
+<div>
+<h1 class="text-center"><b>Airlines</b></h1>
 <table class="table"; style="border-style: groove;">
-    <tr style="background-color: #04AA6D;">
-        <th>Name</th>
+    <tr style="background-color: skyblue;">
+        <th>Airline Name<br /><b style="color: red">Note: If airline link gives you a "404 page", click airline logo to go to the homepage</b></th>
         <th>IATA Code</th>
         <th>ICAO Code</th>
         <th>International Flights</th>
@@ -19,8 +32,9 @@
    @foreach(var item in @Model.response)
    {
        
-    <tr>
-        <td><a asp-protocol="https" asp-host=@item.website>@item.name</a></td>
+    <tr style="background-color: #f2f2f2;">
+        <td><a asp-protocol="https" asp-host=@item.website target="_blank">@item.name</a></td>
+        <!--<td><a asp-protocol="https" asp-host=@item.website>@item.name</a></td>-->
         <td>@item.iata_code</td>
         <td>@item.icao_code</td>
         @if(@item.is_international == 1)
@@ -30,14 +44,10 @@
         else   
         {
             <td></td>
-        }
-
-            
-        
-        
+        } 
     </tr>
-    
     }
 </table>
+</div>
 
 

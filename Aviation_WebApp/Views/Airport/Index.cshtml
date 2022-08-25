@@ -1,14 +1,28 @@
 ﻿@model AirportRoot
 
 <style>
-    
-    tr:hover {background-color: coral;}
-    tr:nth-child(even) {background-color: #f2f2f2;}
-</style>
 
-<h1>Airports</h1>
+     body {
+            background-image: url("https://images.unsplash.com/photo-1592168072506-f99808da7012?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGFpcnBvcnQlMjB0ZXJtaW5hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+    }
+    div{
+        font-family: "consolas";  
+    }
+    
+    tr:hover td{
+       
+        background-color: deepskyblue;}
+    <!--tr:hover {background-color: deepskyblue;}
+    tr:nth-child(even) {background-color: #f2f2f2;}-->
+</style>
+<div>
+<h1 class="text-center"><b>Airports</b></h1>
 <table class="table"; style="border-style: groove;">
-    <tr style="background-color: #04AA6D;">
+    <tr style="background-color: skyblue;">
         <th>Name</th>
         <th>IATA Code</th>
         <th>ICAO Code</th>
@@ -19,7 +33,7 @@
    @foreach(var item in @Model.response)
    {
        
-    <tr>
+    <tr style="background-color: #f2f2f2;">
         <td><a href="@item.website" target="_blank">@item.name</a></td>
         <td>@item.iata_code</td>
         <td>@item.icao_code</td>
@@ -30,3 +44,4 @@
     
     }
 </table>
+</div>

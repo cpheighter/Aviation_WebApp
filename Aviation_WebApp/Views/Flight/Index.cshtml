@@ -1,7 +1,20 @@
 ﻿@using Aviation_WebApp.ViewModels
 @model FlightViewModel
 
-<h3>Search Airport Departing Flights</h3>
+
+<style>
+    body {
+            background-image: url("https://images.unsplash.com/photo-1535284616907-29a0e221d893?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+    }
+    div{
+        font-family: "consolas";  
+    }
+</style>
+<h3><strong>Search Airport Departing Flights</strong></h3>
 <div style="display: list item">
     @using (Html.BeginForm("FlightTracker", "Flight", FormMethod.Post))
     {

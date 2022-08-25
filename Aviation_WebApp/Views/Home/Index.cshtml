@@ -1,8 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<style>
+    body {
+            background-image: url("https://media.istockphoto.com/photos/airplanes-in-the-sky-picture-id1333013401?b=1&k=20&m=1333013401&s=170667a&w=0&h=26hpZbAS-pF5Jq5cKb5HbLL2w3aHkysVQR8AW65y5Z0=");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+    }
+    div{
+        font-family: "consolas";  
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4"><b>ASI</b></h1>
+    <h3>(Aviation Search Information)</h3>
+    <p>All the aviation info you need in one place</p>
 </div>
+<div class="btn-group" style="width:100%">
+  <button style="width:25%"><a class="nav-link text-dark" asp-area="" asp-controller="Flight" asp-action="Index">Departures</a></button>
+  <button style="width:25%"><a class="nav-link text-dark" asp-area="" asp-controller="Arrival" asp-action="Index">Arrivals</a></button>
+  <button style="width:25%"><a class="nav-link text-dark" asp-area="" asp-controller="Aviation" asp-action="Index">Airlines</a></button>
+  <button style="width:25%"><a class="nav-link text-dark" asp-area="" asp-controller="Airport" asp-action="Index">Airports</a></button>
+</div>
+                
